@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <servlet>
+        <servlet-name>DeleteProduct</servlet-name>
+        <servlet-class>com.shoylpik.controller.DeleteProduct</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>UpdateProduct</servlet-name>
+        <servlet-class>com.shoylpik.controller.UpdateProduct</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AddProduct</servlet-name>
+        <servlet-class>com.shoylpik.controller.AddProduct</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>UserValidation</servlet-name>
+        <servlet-class>com.shoylpik.controller.UserValidation</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteProduct</servlet-name>
+        <url-pattern>/DeleteProduct</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UpdateProduct</servlet-name>
+        <url-pattern>/UpdateProduct</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AddProduct</servlet-name>
+        <url-pattern>/AddProduct</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UserValidation</servlet-name>
+        <url-pattern>/UserValidation</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            5
+        </session-timeout>
+    </session-config>
+</web-app>
