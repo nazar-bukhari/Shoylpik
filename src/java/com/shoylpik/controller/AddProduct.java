@@ -24,47 +24,22 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet(name = "AddProduct", urlPatterns = {"/AddProduct"})
 public class AddProduct extends HttpServlet {
 
-    /**
-     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
-     * methods.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     * @throws java.sql.SQLException
-     */
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException, SQLException {
-        response.setContentType("text/html;charset=UTF-8");
-
-        Product product = new Product();
-        product.setProductId(Integer.parseInt(request.getParameter("IPID")));
-        product.setProductName(request.getParameter("IPname"));
-        product.setProductImageName(request.getParameter("IPimage"));
-        product.setProductCategory(request.getParameter("IPcat"));
-        product.setProductPrice(Float.parseFloat(request.getParameter("IPprice")));
-        product.setProductQuantity(Integer.parseInt(request.getParameter("IPQuant")));
-        ProductBean pBean = new ProductBean();
-        pBean.addProduct(product);
-        response.sendRedirect("AdministrationPage.jsp");
-    }
-
-    @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        try {
-            processRequest(request, response);
-        } catch (SQLException ex) {
-            Logger.getLogger(AddProduct.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+
         try {
-            processRequest(request, response);
+            Product product = new Product();
+            product.setProductId(Integer.parseInt(request.getParameter("IPID")));
+            product.setProductName(request.getParameter("IPname"));
+            product.setProductImageName(request.getParameter("IPimage"));
+            product.setProductCategory(request.getParameter("IPcat"));
+            product.setProductPrice(Float.parseFloat(request.getParameter("IPprice")));
+            product.setProductQuantity(Integer.parseInt(request.getParameter("IPQuant")));
+            ProductBean pBean = new ProductBean();
+            pBean.addProduct(product);
+            response.sendRedirect("AdministrationPage.jsp");
         } catch (SQLException ex) {
             Logger.getLogger(AddProduct.class.getName()).log(Level.SEVERE, null, ex);
         }
