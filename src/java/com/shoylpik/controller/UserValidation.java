@@ -39,7 +39,6 @@ public class UserValidation extends HttpServlet {
 
         HttpSession session = request.getSession(false);
         if (session != null) {
-//            session.invalidate(); 
             session.setAttribute("name", name);
         }
         LoginDao logindao = new LoginDao();

@@ -9,7 +9,6 @@ package com.shoylpik.controller;
 import com.shoylpik.model.Product;
 import com.shoylpik.service.ProductBean;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;

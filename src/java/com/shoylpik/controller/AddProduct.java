@@ -24,7 +24,6 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet(name = "AddProduct", urlPatterns = {"/AddProduct"})
 public class AddProduct extends HttpServlet {
 
-
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
