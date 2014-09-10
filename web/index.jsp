@@ -86,16 +86,16 @@
                     </div>
 
                     <div id="htmlcaption-1" class="nivo-html-caption">
-                        <h5 class="p2">Sanple image</h5>
-                        <p>May be some description here</p>
+                        <!--                        <h5 class="p2">Sample image</h5>
+                                                <p>May be some description here</p>-->
                     </div>
                     <div id="htmlcaption-2" class="nivo-html-caption">
                         <h5 class="p2">Serious about our quality</h5>
                         <p>description here</p>
                     </div>
                     <div id="htmlcaption-3" class="nivo-html-caption">
-                        <h5 class="p2">Or something else</h5>
-                        <p>Put any description here</p>
+                        <!--                        <h5 class="p2">Or something else</h5>
+                                                <p>Put any description here</p>-->
                     </div>
                 </section>
             </div>
@@ -167,9 +167,9 @@
 //                                             System.out.println("list : "+list.size());
                                             for (Product pro : list) {
 //                                                System.out.println(pro.getProductName());
-                                        %>
+%>
                                         <tr class="success">
-                                            <td><%=pro.getProductId() %> </td>
+                                            <td><%=pro.getProductId()%> </td>
                                             <td><%=pro.getProductName()%> </td>
                                             <td><%=pro.getProductCategory()%> </td>
                                             <td><%=pro.getProductPrice()%> </td>
@@ -178,37 +178,36 @@
                                         <%
                                             }
                                         %>
-                                        
+
                                     </table>
                                 </div>
                             </li>
                         </ul>
                     </div> 
                 </section>
-            </div>
-
-
-            <!--                        <footer> Defining the footer section of the page 
-                                        <legend></legend>
-                                        <div id="privacy">
-                                            <p>Contact information: <a href="mailto:nazar.bukhari12@gmail.com">
-                                                    nazar.bukhari12@gmail.com</a>.</p>
-                                        </div>
-                                    </footer>           -->
+                                        
+                <footer> 
+                    <legend></legend>
+                    <div id="privacy" class="col-sm-6">
+                        <p>Contact information: <a href="mailto:nazar.bukhari12@gmail.com">
+                                nazar.bukhari12@gmail.com</a>.</p>
+                    </div>
+                </footer>   
+            </div>        
 
         </div>
-                
+
     </body>
 
-            <!-- Linking scripts -->
-        <script src="menu_assets/js/jquery.js"></script>
-        <script src="menu_assets/js/jquery.nivo.slider.pack.js"></script>
-        <script src="menu_assets/js/main.js"></script>
-        <script type="text/javascript" src="resources/js/bootstrap.js"></script>
+    <!-- Linking scripts -->
+    <script src="menu_assets/js/jquery.js"></script>
+    <script src="menu_assets/js/jquery.nivo.slider.pack.js"></script>
+    <script src="menu_assets/js/main.js"></script>
+    <script type="text/javascript" src="resources/js/bootstrap.js"></script>
 
 
-        <!--    [if lt IE 9]> -->
-        <script type="text/javascript" src="js/html5.js"></script>
-        <!--   <![endif]-->
+    <!--    [if lt IE 9]> -->
+    <script type="text/javascript" src="js/html5.js"></script>
+    <!--   <![endif]-->
 </html>
 
