@@ -29,37 +29,37 @@
         <%@include file="header.jsp"%>
         <div class="container" >
             <!--<div class="col-lg-8">-->
-            <form class="form-horizontal" action="AddProduct" method="post">
+            <form class="form-horizontal" action="AddProduct"  method="post" enctype="multipart/form-data" >
                 <fieldset>
                     <legend><center>ADD New Products</center></legend>
                     <div class="form-group">
                         <label for="IPID" class="col-sm-5 control-label">Product ID</label>
                         <div class="col-sm-3">
-                            <input type="text" autocomplete="off" required = "required" class="form-control" id="IPID" name="IPID" placeholder="Product ID">
+                            <input type="text" autocomplete="off"  class="form-control" id="IPID" name="IPID" placeholder="Product ID">
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="IPname" class="col-sm-5 control-label">Product Name</label>
                         <div class="col-sm-3">
-                            <input type="text" required = "required" class="form-control" id="IPname" name="IPname" placeholder="Product Name">
+                            <input type="text"  class="form-control" id="IPname" name="IPname" placeholder="Product Name">
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="IPQuant" class="col-sm-5 control-label">Product Quantity</label>
                         <div class="col-sm-3">
-                            <input type="text" autocomplete="off" required = "required" class="form-control" id="IPQuant" name="IPQuant" placeholder="Product Quantity">
+                            <input type="text" autocomplete="off"  class="form-control" id="IPQuant" name="IPQuant" placeholder="Product Quantity">
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="IPcat" class="col-sm-5 control-label">Product Category</label>
                         <div class="col-sm-3">
-                            <input type="text" autocomplete="off" required = "required" class="form-control" id="IPcat" name="IPcat" placeholder="Product Category">
+                            <input type="text" autocomplete="off"  class="form-control" id="IPcat" name="IPcat" placeholder="Product Category">
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="IPprice" class="col-sm-5 control-label">Product Price</label>
                         <div class="col-sm-3">
-                            <input type="text" autocomplete="off" required = "required" class="form-control" id="IPprice" name="IPprice" placeholder="Product Price">
+                            <input type="text" autocomplete="off" class="form-control" id="IPprice" name="IPprice" placeholder="Product Price">
                         </div>
                     </div>
                     <div class="form-group">

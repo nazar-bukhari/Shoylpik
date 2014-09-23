@@ -43,6 +43,7 @@ public class UserValidation extends HttpServlet {
         }
         LoginDao logindao = new LoginDao();
         if (logindao.validate(name, pass)) {
+
             RequestDispatcher rd = request.getRequestDispatcher("AdministrationPage.jsp");
             rd.forward(request, response);
         } else {
