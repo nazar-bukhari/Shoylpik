@@ -3,6 +3,7 @@
     Created on : 25-Aug-2014, 10:05:53
     Author     : asus
 --%>
+<%@page import="java.io.File"%>
 <%@page import="java.util.List"%>
 <%@page import="com.shoylpik.model.Product"%>
 <%@page import="com.shoylpik.service.ProductBean"%>
@@ -164,16 +165,21 @@
                                         <%
                                             ProductBean proBean = new ProductBean();
                                             List<Product> list = proBean.getAllProduct();
-//                                             System.out.println("list : "+list.size());
+                                            String SAVE_DIRECTORY = "menu_assets/ProductImage";
+                                            String absolutePath = request.getServletContext().getRealPath("");
+                                            String savePath = absolutePath + "/" + SAVE_DIRECTORY;
+                                            String fullImagePath1 = savePath + "/" ;
+                                            String fullImagePath = fullImagePath1.replaceAll("\\\\", "/");
                                             for (Product pro : list) {
-//                                                System.out.println(pro.getProductName());
-%>
+                                                System.out.println(fullImagePath);
+                                                String mainPath = fullImagePath+pro.getProductImageName();
+                                        %>
                                         <tr class="success">
                                             <td><%=pro.getProductId()%> </td>
                                             <td><%=pro.getProductName()%> </td>
                                             <td><%=pro.getProductCategory()%> </td>
-                                            <td><%=pro.getProductPrice()%> </td>
-                                            <td><%=pro.getProductImageName()%> </td>
+                                            <td><%=pro.getProductPrice()%> </td> 
+                                            <td><img src=<%=mainPath%> width="114" height="110"></td>
                                         </tr>
                                         <%
                                             }
@@ -185,7 +191,7 @@
                         </ul>
                     </div> 
                 </section>
-                                        
+
                 <footer> 
                     <legend></legend>
                     <div id="privacy" class="col-sm-6">
